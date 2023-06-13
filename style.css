@@ -1,3 +1,54 @@
-h1, h2 {
-  font-family: Lato;
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main add"
+    "footer footer footer"
+    ;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 2px;
+  height: 100vh;
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header,
+nav,
+aside,
+main,
+footer {
+  border: 3px solid;
+  padding: 16px;
+}
+header {
+  grid-area: header;
+  border-color: hsl(45deg 100% 50%);
+  background-color: hsl(45deg 100% 50% / 0.2);
+}
+nav {
+  grid-area: nav;
+  border-color: hsl(170deg 100% 35%);
+  background-color: hsl(170deg 100% 35% / 0.2);
+}
+main {
+  grid-area: main;
+  border-color: hsl(220deg 100% 50%);
+  background-color: hsl(220deg 100% 50% / 0.2);
+}
+aside {
+  grid-area: add;
+  border-color: hsl(300deg 100% 45%);
+  background-color: hsl(300deg 100% 45% / 0.2);
+}
+footer {
+  grid-area: footer;
+  border-color: hsl(350deg 100% 60%);
+  background-color: hsl(350deg 100% 60% / 0.2);
+}
+body {
+  padding: 0;
+  margin: 0;
 }
